@@ -1,0 +1,12 @@
+version: "2"
+services:  
+  blog:
+    image: manojgupta/ghost-pine64:latest
+    container_name: manoj-blog
+    ports:
+        - "80:2368"
+    volumes:
+        - /media/manoj/usb/ghost/content/apps:/var/www/ghost/content/apps
+        - /media/manoj/usb/ghost/content/data:/var/www/ghost/content/data
+        - /media/manoj/usb/ghost/content/images:/var/www/ghost/content/images
+    restart: always
