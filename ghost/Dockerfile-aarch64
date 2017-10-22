@@ -1,4 +1,5 @@
-FROM debian
+#Used on pine64 board
+FROM aarch64/debian
 
 USER root
 

@@ -1,4 +1,4 @@
-FROM debian
+FROM armhf/debian
 
 USER root
 
@@ -16,7 +16,7 @@ RUN mkdir -p ghost
 RUN curl -L https://github.com/TryGhost/Ghost/releases/download/0.11.8/Ghost-0.11.8.zip -o ghost.zip && \
     unzip -uo ghost.zip -d ghost && rm ./*.zip
 
-RUN npm install -g pm2
+RUN npm install pm2 -g
 
 WORKDIR /var/www/ghost
 RUN npm install sqlite3
